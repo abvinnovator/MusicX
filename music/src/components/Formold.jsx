@@ -3,7 +3,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import music from './form.png';
 
-const Form = () => {
+const Formold = () => {
   const musicInputRef = useRef(null);
   const coverInputRef = useRef(null);
   const [title, setTitle] = useState('');
@@ -23,6 +23,7 @@ const Form = () => {
 
   const handleFileUpload = (event, type) => {
     const file = event.target.files[0];
+    // Code to handle file upload goes here
     if (type === 'music') {
       setIsMusicUploaded(true);
       toast.success('Music uploaded successfully!');
@@ -42,26 +43,26 @@ const Form = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-900 to-gray-700 flex flex-col mb-5">
-      <div className="flex justify-center w-full px-4 py-6 shadow-md bg-gray-800">
+    <div className="min-h-screen bg-black flex flex-col mb-5">
+      <div className="flex justify-center w-full px-4 py-4">
         <div className="flex items-center">
           <div className="w-5 h-5 bg-red-500 rounded-full mr-4"></div>
           <h1 className="text-white text-2xl font-bold">MY UPLOADS</h1>
         </div>
       </div>
-      <div className="flex justify-end p-4">
-        <a href="#" className="bg-gray-800 border-2 border-red-500 text-white font-bold py-2 px-4 rounded hover:bg-red-500 transition-colors duration-300">
+      <div className="flex justify-end p-3 ">
+        <a href="#" className="bg-black border-2 border-red-500 text-white font-bold py-2 px-4 rounded mt-4">
           Home
         </a>
       </div>
-      <div className="flex flex-col justify-center items-center flex-grow p-4">
-        <div className="bg-gray-800 rounded-lg p-8 mt-8 flex flex-col md:flex-row shadow-lg">
-          <div className="mb-8 md:mr-20 md:mb-0 flex-shrink-0">
+      <div className="flex flex-col justify-center items-center flex-grow">
+        <div className="bg-black rounded-lg p-8 mt-8 flex flex-col md:flex-row">
+          <div className="mb-8 md:mr-20 md:mb-0">
             <div className="mb-4">
               <img src={music} alt="Music" className="max-w-full max-h-[300px] h-auto rounded-lg border border-gray-500" />
             </div>
             <div className="text-white font-bold text-lg relative mb-4">
-              <button onClick={handleMusicUpload} className="bg-gray-800 border-2 border-red-500 text-white font-bold py-2 px-4 rounded hover:bg-red-500 transition-colors duration-300">
+              <button onClick={handleMusicUpload} className="bg-black border-2 border-red-500 text-white font-bold py-2 px-4 rounded">
                 Upload Music
               </button>
               <input
@@ -73,7 +74,7 @@ const Form = () => {
               <div className="h-1 bg-red-500 absolute bottom-0 left-0 right-0"></div>
             </div>
             <div className="text-white font-bold text-lg relative mb-4">
-              <button onClick={handleCoverUpload} className="bg-gray-800 border-2 border-red-500 text-white font-bold py-2 px-4 rounded hover:bg-red-500 transition-colors duration-300">
+              <button onClick={handleCoverUpload} className="bg-black border-2 border-red-500 text-white font-bold py-2 px-4 rounded">
                 Upload Cover
               </button>
               <input
@@ -86,57 +87,55 @@ const Form = () => {
             </div>
           </div>
           <div className="flex-1">
-            <form onSubmit={handleSubmit} className="space-y-4">
-              <div>
+            <form onSubmit={handleSubmit}>
+              <div className="mb-4">
                 <input
                   type="text"
                   id="title"
-                  className="bg-gray-700 rounded-md p-3 w-full text-white focus:outline-none focus:ring-2 focus:ring-red-500 transition-colors duration-300"
+                  className="bg-gray-800 rounded-md p-2 w-full text-white"
                   placeholder="Title"
                   value={title}
                   onChange={(e) => setTitle(e.target.value)}
                   required
                 />
               </div>
-              <div>
+              <div className="mb-4">
                 <input
                   type="text"
                   id="subtitle"
-                  className="bg-gray-700 rounded-md p-3 w-full text-white focus:outline-none focus:ring-2 focus:ring-red-500 transition-colors duration-300"
+                  className="bg-gray-800 rounded-md p-2 w-full text-white"
                   placeholder="Subtitle"
                   value={subtitle}
                   onChange={(e) => setSubtitle(e.target.value)}
                   required
                 />
               </div>
-              <div>
+              <div className="mb-4">
                 <input
                   type="text"
                   id="mainGenre"
-                  className="bg-gray-700 rounded-md p-3 w-full text-white focus:outline-none focus:ring-2 focus:ring-red-500 transition-colors duration-300"
+                  className="bg-gray-800 rounded-md p-2 w-full text-white "
                   placeholder="Main Genre"
                   value={mainGenre}
                   onChange={(e) => setMainGenre(e.target.value)}
                   required
                 />
               </div>
-              <div>
-                <label htmlFor="duration" className="text-white block mb-2">
-                  Duration (mm:ss)
+              <div className="mb-4">
+                <label htmlFor="genres" className="text-white">
+                Duration (mm:ss)
                 </label>
+
                 <input
                   type="time"
                   id="duration"
-                  className="bg-gray-700 rounded-md p-3 w-full text-white focus:outline-none focus:ring-2 focus:ring-red-500 transition-colors duration-300"
+                  className="bg-gray-800 rounded-md p-2 w-full text-white"
                   value={duration}
                   onChange={(e) => setDuration(e.target.value)}
                   required
                 />
               </div>
-              <button
-                type="submit"
-                className="bg-gray-800 border-2 border-red-500 text-white font-bold py-2 px-4 rounded hover:bg-red-500 transition-colors duration-300"
-              >
+              <button type="submit" className="bg-black border-2 border-red-500 text-white font-bold py-2 px-4 rounded">
                 <svg
                   className="inline-block h-6 w-6 mr-2"
                   xmlns="http://www.w3.org/2000/svg"
@@ -156,4 +155,4 @@ const Form = () => {
   );
 };
 
-export default Form;
+export default Formold; 
