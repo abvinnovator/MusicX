@@ -5,9 +5,9 @@ const Home = () => {
   return (
     <>
     <Header />
-    <div className="bg-black flex flex-col items-center justify-center h-screen bg-[url('components\back.jpg')] bg-cover bg-center">
+    <div className="bg-black flex flex-col items-center justify-center h-screen bg-[url('https://res.cloudinary.com/dtonbpwvj/image/upload/v1712837465/back_e9mrdh.jpg')] bg-cover bg-center">
   <div className="text-transparent bg-clip-text font-bold text-4xl md:text-6xl text-center">
-    <span className="text-white">LEELOOP a best way to sell your</span>
+    <span className="text-white">LEELOOP a best way to sell your</span>{' '}
     <span className="bg-clip-text bg-gradient-to-r from-[rgba(222,0,75,1)] via-[rgba(191,70,255,1)] to-[rgba(0,212,255,1)] animate-gradient-text">songs worldwide and become popular fans</span>
   </div>
   <button
