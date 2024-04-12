@@ -2,9 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
-@keyframes gradient-text {
+@keyframes gradient-animation {
   0% {
-    background-position: 10% 50%;
+    background-position: 0% 50%;
   }
   50% {
     background-position: 100% 50%;
@@ -15,5 +15,11 @@
 }
 
 .animate-gradient-text {
-  animation: gradient-text 5s ease infinite;
+  animation: gradient-animation 10s ease infinite;
+  background-size: 400% 400%;
+}
+
+.animate-gradient-button {
+  animation: gradient-animation 10s ease infinite;
+  background-size: 400% 400%;
 }

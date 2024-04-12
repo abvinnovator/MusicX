@@ -15,11 +15,11 @@ const Header = () => {
       <nav>
         <ul>
           <li>
-            <button
-              className="h-12 m-2 text-lg bg-gradient-to-r from-[rgba(222,0,75,1)] via-[#c8a5db] to-[rgba(0,212,255,1)] text-white font-bold py-4 px-8 rounded-3xl mt-10 hover:opacity-80 transition-opacity duration-300"
-            >
-              Sign Up
-            </button>
+          <button
+  class="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white font-semibold py-3 px-6  rounded-full shadow-lg transform hover:scale-105 transition duration-300 ease-in-out"
+>
+  SignUp
+</button>
           </li>
         </ul>
       </nav>
