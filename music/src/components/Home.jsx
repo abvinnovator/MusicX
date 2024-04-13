@@ -5,7 +5,6 @@ const Home = () => {
   return (
     <>
     <Header />
-      <h1>sai</h1>
     <div className="bg-black flex flex-col items-center justify-center h-screen bg-[url('https://res.cloudinary.com/dtonbpwvj/image/upload/v1712837465/back_e9mrdh.jpg')] bg-cover bg-center">
   <div className="text-transparent bg-clip-text font-bold text-4xl md:text-6xl text-center">
     <span className="text-white">LEELOOP a best way to sell your</span>{' '}
