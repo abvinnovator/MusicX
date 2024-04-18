@@ -14,7 +14,6 @@ const MyMusic = () => {
   };
 
   const handleOptionsClick = (index) => {
-    // Add your edit and delete functionality here
     console.log(`Clicked options for song ${music[index].name}`);
   };
 
@@ -56,7 +55,7 @@ const MyMusic = () => {
             Uploaded
           </button>
         </div>
-        <table className="w-full border-collapse">
+        <table className="w-full  table-fixed">
           <thead>
             <tr className="bg-yellow-500 text-black">
               <th className="px-2 py-1 text-left">Name</th>
