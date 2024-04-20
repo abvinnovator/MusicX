@@ -18,7 +18,7 @@ const MyProfile = () => {
                 />
               </div>
               <div>
-                <h2 className="text-xl font-semibold">VAMSI</h2>
+                <h2 className="text-xl font-semibold">LeeLoop</h2>
                 <p>Music lover</p>
               </div>
             </div>

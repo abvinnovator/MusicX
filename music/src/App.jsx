@@ -7,6 +7,7 @@ import sidebar_menu from './sidebar/sidebar_menu';
 import Home from './components/Home';
 import PaymentGateway from './components/PaymentGateway';
 import Dashboard from './Dashboard';
+import MyProfileEdit from './pages/MyProfileEdit';
 
 function App() {
   const musicData = {
@@ -32,6 +33,7 @@ function App() {
             <Route path="/home" element={<Home />} />
             <Route path="/paymentgateway" element={<PaymentGateway />} />
             <Route path='/dashboard' element={<Dashboard data={musicData}/>} />
+            <Route path='/myprofileedit' element={<MyProfileEdit />} />
           </Routes>
         </div>
       </div>
